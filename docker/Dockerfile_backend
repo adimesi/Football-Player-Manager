@@ -1,0 +1,12 @@
+FROM openjdk:17-jdk-slim
+
+WORKDIR /back
+COPY demo /back/
+RUN apt update -y
+RUN apt install maven -y
+RUN mvn clean install
+EXPOSE 8000
+ENTRYPOINT [ "mvn", "spring-boot:run"]
+
+
+

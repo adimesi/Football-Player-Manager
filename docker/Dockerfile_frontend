@@ -1,0 +1,7 @@
+FROM node:20.13.1
+WORKDIR /front
+COPY frontend /front/
+RUN npm install
+EXPOSE 3000
+ENTRYPOINT [ "npm" ,"start" ]
+

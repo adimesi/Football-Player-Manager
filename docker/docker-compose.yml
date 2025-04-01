@@ -1,0 +1,40 @@
+version: '3.8'
+services:
+  mysql:
+    image: mysql:latest
+    container_name: mysql-container
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: my-secret-pw
+      MYSQL_DATABASE: springboot_db
+      MYSQL_USER: user
+      MYSQL_PASSWORD: my-secret-pw
+    ports:
+      - "3306:3306"
+    volumes:
+      - mysql_data:/var/lib/mysql
+
+  back:
+    image: backc:latest
+    container_name: spring-boot-app
+    restart: always
+    ports:
+      - "8080:8080"
+    depends_on:
+      - mysql
+    # environment:
+    #   SPRING_DATASOURCE_URL: jdbc:mysql://mysql:3306/mydatabase
+    #   SPRING_DATASOURCE_USERNAME: user
+    #   SPRING_DATASOURCE_PASSWORD: password
+
+
+  front:
+    image: front:latest
+    container_name: front-app
+    restart: always
+    ports:
+      - "3000:3000"
+    depends_on:
+      - back
+volumes:
+  mysql_data:
