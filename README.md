@@ -140,6 +140,7 @@ Use Postman or a similar tool to send a `POST` request to `http://localhost:8080
 ## **Example CSV File**
 
 Save the following content as `Example.csv`:
+### **Example.csv**
 
 ```csv
 firstName,lastName,nationalities,dateOfBirth,positions,height
@@ -156,11 +157,3 @@ Neymar,Junior,Brazil,1992-02-05,Forward,Left Winger,175
 
 ---
 
-### **Example.csv**
-
-```csv
-firstName,lastName,nationalities,dateOfBirth,positions,height
-Lionel,Messi,Argentina,1987-06-24,Forward,Right Winger,170
-Cristiano,Ronaldo,Portugal,1985-02-05,Forward,Left Winger,187
-Neymar,Junior,Brazil,1992-02-05,Forward,Left Winger,175
-```
