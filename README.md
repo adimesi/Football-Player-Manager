@@ -153,4 +153,3 @@ Neymar,Junior,Brazil,1992-02-05,Forward,Left Winger,175
 - Add authentication and role-based access control.
 - Implement pagination for large datasets.
 - Enhance error handling for bulk uploads.
-```
